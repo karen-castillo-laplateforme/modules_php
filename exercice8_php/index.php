@@ -46,7 +46,7 @@ echo "Email valide. ";
     echo "Email non valide. ";
 }
 
-// EXERCICE 2
+// EXERCICE 3
 echo "<br><br> EXERCICE 3 <br>";
 
 $panier = "Stylo:2.5, Cahier:4.25, gomme:abc, Table:42.99, chaise:14.9";
