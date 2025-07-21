@@ -65,7 +65,7 @@ function calculImposable($revenu, $trancheMin, $trancheMax)
     return ($revenu > $trancheMax) ? ($trancheMax - $trancheMin) : ($revenu - $trancheMin);
 }
 
-function calculImpots($revenu)
+function calculImpots2($revenu)
 {
     $montant = 0;
 
@@ -112,11 +112,73 @@ function calculImpots($revenu)
 // Calcul l’impôt si le revenu est de 38 000€
 
 // Calcul l’impôt si le revenu est de 64 000€
-echo "l’impôt si le revenu est de 16 000€ et de "." ".calculImpots(16000)."euro <br>";
-echo "l’impôt si le revenu est de 38 000€ et de"." ". calculImpots(38000)."euro <br>";
-echo "l’impôt si le revenu est de 64 000€ et de"." ". calculImpots(64000)."euro <br>";
-echo "l’impôt si le revenu est de 70 000€ et de"." ". calculImpots(70000)."euro <br>";
-echo "l’impôt si le revenu est de 20 000€ et de "." ".calculImpots(20000)."euro <br>";
-echo "l’impôt si le revenu est de 24 000€ et de "." ".calculImpots(24000)."euro <br>";
+echo "l’impôt si le revenu est de 16 000€ et de "." ".calculImpots2(16000)."euro <br>";
+echo "l’impôt si le revenu est de 38 000€ et de"." ". calculImpots2(38000)."euro <br>";
+echo "l’impôt si le revenu est de 64 000€ et de"." ". calculImpots2(64000)."euro <br>";
+echo "l’impôt si le revenu est de 70 000€ et de"." ". calculImpots2(70000)."euro <br>";
+echo "l’impôt si le revenu est de 20 000€ et de "." ".calculImpots2(20000)."euro <br>";
+echo "l’impôt si le revenu est de 24 000€ et de "." ".calculImpots2(24000)."euro <br>";
 
+// EXERCICE 4
+echo "<br> Exercice 4<br>";
+
+$classe = [
+    [
+        "prenom" => "Lucie",
+        "maths" => 12,
+        "francais" => 14,
+        "histoire" => 9
+    ],
+    [
+        "prenom" => "Yann",
+        "maths" => 8,
+        "francais" => 10,
+        "histoire" => 7
+    ],
+    [
+        "prenom" => "Sophie",
+        "maths" => 16,
+        "francais" => 13,
+        "histoire" => 15
+    ]
+];
+
+function calculMoyenne($array){
+    foreach($array as $key){
+        $moyenneParEleve = ($key["maths"] + $key["francais"] + $key["histoire"])/count($key);
+        $estAdmis = $moyenneParEleve >= 10 ? "est admis" : "n'est pas admis. <br>";
+        echo $key["prenom"] ." a $moyenneParEleve de moyenne : $estAdmis";
+        }
+}
+
+calculMoyenne($classe);
+
+// EXERCICE 5
+echo "<br><br> EXERCICE 5 <br>";
+function affichePairOuImpair($nbrA, $nbrB, $pairOuImpair){
+       
+    for($i = $nbrA; $i<= $nbrB; $i++){
+        if($i %2 === 0 && $pairOuImpair === "pair"){
+            echo $i;
+        }
+        if($i %2 !== 0 && $pairOuImpair === "impair"){
+          echo $i;
+        }
+    }
+}
+echo "Les chiffres pairs sont : ";
+affichePairOuImpair(7,99, "pair");
+echo "<br> Les chiffres impairs sont : ";
+affichePairOuImpair(59,169, "impair");
+
+// EXERCICE 6
+echo "<br><br> EXERCICE 6 <br>";
+
+function multiplication($nbr){
+    for($i=1; $i<=10; $i++){
+        echo "$nbr x $i = " .$nbr* $i ."<br>";
+    }
+}
+
+multiplication(5);
 ?>
