@@ -1,6 +1,6 @@
 <?php
-$mdp = htmlspecialchars(trim($_POST["mdp"]), ENT_QUOTES);
-$identifiant = htmlspecialchars(trim($_POST["identifiant"]), ENT_QUOTES);
+$mdp = htmlspecialchars(trim($_POST["mdp"])?? "", ENT_QUOTES);
+$identifiant = htmlspecialchars(trim($_POST["identifiant"])?? "", ENT_QUOTES);
 var_dump($identifiant);
 var_dump($mdp);
 // Identifiants attendus
