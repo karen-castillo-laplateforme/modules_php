@@ -1,0 +1,36 @@
+#modules-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#modules-main h1 {
+  margin-top: 0;
+  margin-bottom : 1rem;
+}
+
+#modules-main div {
+    width: 90%;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;  
+}
+
+#modules-main h2{
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+#modules-main li {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    /* text-align: center; */
+}
+
+#modules-main ul{
+    text-align: center;
+    list-style-position: inside;
+}

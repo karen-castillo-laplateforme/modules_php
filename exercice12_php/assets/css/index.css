@@ -1,0 +1,20 @@
+#index-main{
+    padding: 2.5rem;
+}
+
+#index-main h1{
+margin-bottom: 3rem;
+}
+
+#index-main p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+#index-main h2:last-of-type{
+    margin-top: 2.5rem;
+}
+
+#index-main h2{
+    text-decoration: underline;
+}
